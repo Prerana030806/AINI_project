@@ -3,12 +3,9 @@ import json
 import os
 import base64
 from datetime import datetime
-from questions import questions   # YOUR QUESTIONS FILE
-
+from questions import questions   # questions file
 st.set_page_config(page_title="AINI AI", layout="wide")
-
-# ---------------- BACKGROUND ---------------- #
-
+#background
 def set_background():
     if os.path.exists("image.png"):
         with open("image.png", "rb") as f:
@@ -37,8 +34,7 @@ def set_background():
 
 set_background()
 
-# ---------------- MEMORY SAFE LOAD ---------------- #
-
+# memory
 if not os.path.exists("memory.json"):
     with open("memory.json", "w") as f:
         json.dump({"users": {}}, f)
@@ -53,7 +49,7 @@ def save_memory():
     with open("memory.json", "w") as f:
         json.dump(memory, f, indent=4)
 
-# ---------------- SESSION ---------------- #
+# session
 
 if "page" not in st.session_state:
     st.session_state.page = "login"
@@ -67,7 +63,7 @@ if "score" not in st.session_state:
 if "answers" not in st.session_state:
     st.session_state.answers = []
 
-# ---------------- LOGIN PAGE ---------------- #
+# login page
 
 if st.session_state.page == "login":
 
@@ -86,7 +82,7 @@ if st.session_state.page == "login":
             if email not in memory["users"]:
                 memory["users"][email] = {}
 
-            # SAFE KEYS
+            # keys
             memory["users"][email].setdefault("name", name)
             memory["users"][email].setdefault("conversations", [])
             memory["users"][email].setdefault("scores", [])
@@ -98,7 +94,7 @@ if st.session_state.page == "login":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- WELCOME + EMOTION ---------------- #
+# welcome
 
 elif st.session_state.page == "welcome":
 
@@ -125,7 +121,7 @@ elif st.session_state.page == "welcome":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- INTERVIEW ---------------- #
+# interview start
 
 elif st.session_state.page == "interview":
 
@@ -175,7 +171,7 @@ elif st.session_state.page == "interview":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- DASHBOARD ---------------- #
+# dashbourd
 
 elif st.session_state.page == "dashboard":
 
@@ -185,7 +181,7 @@ elif st.session_state.page == "dashboard":
 
     email = st.session_state.email
 
-    # SAFE AGAIN
+    # safe 
     memory["users"][email].setdefault("scores", [])
     memory["users"][email].setdefault("conversations", [])
 
@@ -211,4 +207,4 @@ elif st.session_state.page == "dashboard":
         st.session_state.page = "welcome"
         st.rerun()
 
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True) 
