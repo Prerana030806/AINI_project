@@ -83,3 +83,49 @@ State transitions are managed using Streamlit’s `session_state`.
 ---
 
 # 📂 Project Structure
+
+AINI_project/
+│
+├── app.py
+├── questions.py
+├── memory.json
+├── image.png
+└── README.md
+
+---
+
+# ▶️ How to Run the Project
+
+### 1️⃣ Install Streamlit (if not installed)
+
+
+pip install streamlit
+
+
+### 2️⃣ Run the application
+
+
+python -m streamlit run app.py
+
+
+### 3️⃣ Open in Google Chrome
+
+- Voice input works best in **Google Chrome**
+- Allow microphone permissions when prompted
+
+---
+
+# 💡 Future Improvements
+
+- AI-based response evaluation using LLMs (Gemini/OpenAI)  
+- Real-time feedback generation  
+- Text-to-Speech output  
+- Advanced sentiment analysis  
+- Database integration instead of JSON  
+
+---
+
+# 📌 Conclusion
+
+Aria demonstrates a structured AI Interview Assistant with emotional awareness, scoring logic, voice integration, and performance tracking.  
+It provides a practical simulation of a real interview environment while maintaining a clean and interactive user experience.
