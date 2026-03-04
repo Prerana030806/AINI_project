@@ -35,20 +35,21 @@ The goal is to improve reliability, emotional intelligence, and human-like inter
 
 ## How to Run
 ### Backend
-```bash
+
 cd backend
 python -m venv venv
 source venv/Scripts/activate   # Windows PowerShell
 pip install -r requirements.txt
 python -m uvicorn main:app --reload
-Frontend
+### Frontend
+
 cd frontend
 npm install
 npm run dev
 
 Open your browser at: http://127.0.0.1:5173/
 
-Week 3 Learning
+### Week 3 Learning
 
 Built a secure login system with username and email
 
