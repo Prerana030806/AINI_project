@@ -47,7 +47,7 @@ cd frontend
 npm install
 npm run dev
 
-Open your browser at: http://127.0.0.1:5173/
+Open in your browser (Chrome)
 
 ### Week 3 Learning
 
