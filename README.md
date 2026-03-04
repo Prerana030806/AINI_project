@@ -1,131 +1,61 @@
-# 🤖 Aria – AI Interview Intelligence System
+# Aria AI - Week 3: Bring Her Alive
 
-Aria is an AI-powered Interview Practice Assistant built using **Python and Streamlit**.  
-It simulates a structured interview environment with basic emotional intelligence, performance tracking, and voice-based answer input.
-
----
-
-# 📌 Project Objective
-
-The objective of this project is to build a structured AI system that:
-
-- Detects basic user emotions  
-- Conducts HR and technical interviews  
-- Evaluates answers using keyword logic  
-- Stores user performance data  
-- Tracks improvement over time  
-- Supports voice-based answer input (Speech-to-Text)  
+## Objective
+Week 3 focuses on giving Aria AI a "brain" to not just converse, but think, verify, decide, and act.  
+The goal is to improve reliability, emotional intelligence, and human-like interaction.
 
 ---
 
-# 🚀 Features
-
-- 🔐 Name + Email Login System  
-- 😊 Emotional Response Detection (Welcome Stage)  
-- 🧑‍💼 Structured Interview Flow (HR → Technical)  
-- 🧠 Keyword-Based Answer Evaluation  
-- 🎤 Voice-to-Text Answer Input (Browser-based Speech Recognition)  
-- 📊 Score Calculation System  
-- 📈 Dashboard with Performance Graph  
-- 💾 Persistent Memory Storage using `memory.json`  
-- 🔄 State-Based Navigation  
-  (Login → Welcome → Interview → Dashboard)  
-- 🌙 Modern Dark UI with Background Design  
+## Features Implemented
+- React + Tailwind Frontend for UI  
+- Login system (email + password + name)  
+- Chat interface connected to FastAPI backend  
+- Voice input/output using `speechSynthesis` API (female voice)  
+- Premium dark navy glassmorphism UI  
+- Basic interview stages: HR Round → Technical Round → Feedback  
+- Encouragement and motivational responses based on user's mood
 
 ---
 
-# 🏗️ System Architecture
-
-**Frontend:** Streamlit UI  
-**Backend Logic:** Python  
-**Memory Storage:** JSON-based structured file (`memory.json`)  
-
-The application uses:
-
-- `st.session_state` for temporary state handling  
-- JSON file for persistent user-level performance tracking  
+## Planned Improvements
+- Multi-Model API Orchestration (accuracy + comparison logic)  
+- Feedback loop system with ratings and logging  
+- Agent task abilities (step-by-step reasoning, tool use)  
+- Trust & reliability layer (fact-checking, confidence scoring)
 
 ---
 
-# 🔄 Application States
-
-The system is divided into four structured states:
-
-1. Login  
-2. Welcome  
-3. Interview  
-4. Dashboard  
-
-State transitions are managed using Streamlit’s `session_state`.
+## Tech Stack
+- Frontend: React.js, TailwindCSS  
+- Backend: FastAPI (Python)  
+- API: Multi-modal AI model (Gemini 2.5 Flash, or any configured LLM)  
+- Voice: Browser `speechSynthesis`  
 
 ---
 
-# 🧠 Core Concepts Used
+## How to Run
+### Backend
+```bash
+cd backend
+python -m venv venv
+source venv/Scripts/activate   # Windows PowerShell
+pip install -r requirements.txt
+python -m uvicorn main:app --reload
+Frontend
+cd frontend
+npm install
+npm run dev
 
-- State Management  
-- Session Handling  
-- JSON Data Storage  
-- Keyword-Based Evaluation Logic  
-- Basic Emotion Detection using Conditional Logic  
-- Speech-to-Text using Browser Web Speech API  
-- Performance Tracking with Graph Visualization  
+Open your browser at: http://127.0.0.1:5173/
 
----
+Week 3 Learning
 
-# 🛠️ Technologies Used
+Built a secure login system with username and email
 
-- Python  
-- Streamlit  
-- JSON  
-- HTML + CSS (Custom Styling)  
-- Browser Web Speech API (for Voice Input)  
+Connected frontend to backend with API fetch calls
 
----
+Implemented voice input/output for real-time interaction
 
-# 📂 Project Structure
+Learned about multi-model orchestration, feedback systems, and reliability layers conceptually
 
-AINI_project/
-│
-├── app.py
-├── questions.py
-├── memory.json
-├── image.png
-└── README.md
-
----
-
-# ▶️ How to Run the Project
-
-### 1️⃣ Install Streamlit (if not installed)
-
-
-pip install streamlit
-
-
-### 2️⃣ Run the application
-
-
-python -m streamlit run app.py
-
-
-### 3️⃣ Open in Google Chrome
-
-- Voice input works best in **Google Chrome**
-- Allow microphone permissions when prompted
-
----
-
-# 💡 Future Improvements
-
-- AI-based response evaluation using LLMs (Gemini/OpenAI)  
-- Real-time feedback generation  
-- Text-to-Speech output  
-- Advanced sentiment analysis  
-- Database integration instead of JSON  
-
----
-
-# 📌 Conclusion
-
-Aria demonstrates a structured AI Interview Assistant with emotional awareness, scoring logic, voice integration, and performance tracking.  
-It provides a practical simulation of a real interview environment while maintaining a clean and interactive user experience.
+Focused on modern UI/UX and human-like AI behavior
