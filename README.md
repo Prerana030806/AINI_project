@@ -37,13 +37,19 @@ The goal is to improve reliability, emotional intelligence, and human-like inter
 ### Backend
 
 -cd backend
+
 -python -m venv venv
+
 -source venv/Scripts/activate   # Windows PowerShell
+
 -python -m uvicorn main:app --reload
+
 ### Frontend
 
 -cd frontend
+
 -npm install
+
 -npm run dev
 
 Open in your browser (Chrome)
