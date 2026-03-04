@@ -36,27 +36,26 @@ The goal is to improve reliability, emotional intelligence, and human-like inter
 ## How to Run
 ### Backend
 
-cd backend
-python -m venv venv
-source venv/Scripts/activate   # Windows PowerShell
-pip install -r requirements.txt
-python -m uvicorn main:app --reload
+-cd backend
+-python -m venv venv
+-source venv/Scripts/activate   # Windows PowerShell
+-python -m uvicorn main:app --reload
 ### Frontend
 
-cd frontend
-npm install
-npm run dev
+-cd frontend
+-npm install
+-npm run dev
 
 Open in your browser (Chrome)
 
 ### Week 3 Learning
 
-Built a secure login system with username and email
+-Built a secure login system with username and email
 
-Connected frontend to backend with API fetch calls
+-Connected frontend to backend with API fetch calls
 
-Implemented voice input/output for real-time interaction
+-Implemented voice input/output for real-time interaction
 
-Learned about multi-model orchestration, feedback systems, and reliability layers conceptually
+-Learned about multi-model orchestration, feedback systems, and reliability layers conceptually
 
-Focused on modern UI/UX and human-like AI behavior
+-Focused on modern UI/UX and human-like AI behavior
