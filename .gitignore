@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Environment variables
+.env
+
+# Build files
+dist/
+.vite/
+
+# OS files
+.DS_Store
+Thumbs.db 
