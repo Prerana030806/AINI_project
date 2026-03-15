@@ -149,7 +149,7 @@ export default function App() {
     try {
       const guidelines = `Guidelines: If correct encourage; if partial suggest improvements; if wrong motivate constructively; avoid repeating generic lines; be human and dynamic.`
       const structured = `[Stage: ${stage}] [Candidate: ${auth?.name || auth?.email || 'Guest'}] ${guidelines} ${trimmed}`
-      const res = await fetch("http://127.0.0.1:8000/chat", {
+      const res = await fetch("https://aini-project.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: structured })
